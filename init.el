@@ -18,7 +18,7 @@
 ;; Set variables
 ;;
 (setq make-backup-files nil)
-(setq-default truncate-lines t)
+(setq-default truncate-lines f)
 (setq-default buffer-file-coding-system 'utf-8-unix)
 
 ;;
