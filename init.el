@@ -15,15 +15,15 @@
  )
 
 ;;
-;; Set variables
+;; General
 ;;
 (setq make-backup-files nil)
 (setq-default truncate-lines nil)
-(setq-default buffer-file-coding-system 'utf-8-unix)
 
 ;;
 ;; UTF-8 configuration
 ;;
+(setq-default buffer-file-coding-system 'utf-8-unix)
 (prefer-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -60,22 +60,14 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
-
-;; Useful global settings as Emacs is used predominantely for Clojure development
-
-;; Launch the Clojure repl via Leiningen - M-x clojure-jack-in 
-;; Global shortcut definition to fire up clojure repl and connect to it
-(global-set-key (kbd "C-c C-j") 'clojure-jack-in)
-
-;; Colour mach parens and other structure characters to make code easy to follow
-(global-rainbow-delimiters-mode)
-
 ;;
 ;; customizing
 ;;
 (add-to-list 'load-path user-emacs-directory)
 (require 'custom-bindings)
 (require 'custom-functions)
+(require 'clojure)
+(require 'haskell)
 
 ;;
 ;; default theme
