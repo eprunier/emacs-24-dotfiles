@@ -54,7 +54,9 @@
 	clojure-mode clojure-test-mode
         rainbow-delimiters
         ac-slime slime slime-repl
-	markdown-mode ))
+	markdown-mode
+        haskell-mode ghc ghci-completion
+        groovy-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -67,7 +69,7 @@
 (require 'custom-bindings)
 (require 'custom-functions)
 (require 'clojure)
-(require 'haskell)
+(require 'groovy)
 
 ;;
 ;; default theme
