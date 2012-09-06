@@ -3,3 +3,6 @@ places
 .smex-items
 auto-save-list/
 backups
+url/
+eshell/*
+!eshell/alias
