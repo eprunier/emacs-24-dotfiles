@@ -15,7 +15,8 @@
 ;;
 ;; General
 ;;
-(setq make-backup-files nil)
+(setq inhibit-startup-message t
+      make-backup-files nil)
 (setq-default truncate-lines nil)
 
 
