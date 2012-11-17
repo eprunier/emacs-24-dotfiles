@@ -49,7 +49,8 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(paredit rainbow-delimiters highlight-parentheses
+(defvar my-packages '(paredit ido-ubiquitous smex
+			      rainbow-delimiters highlight-parentheses
 			      clojure-mode clojure-test-mode
 			      ac-slime slime slime-repl nrepl
 			      markdown-mode
@@ -88,3 +89,14 @@
 
 ;; Show matching parentheses
 (show-paren-mode 1)
+
+;; Enable ido
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+(ido-ubiquitous 1)
+
+;; Enable smex
+(require 'smex)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
