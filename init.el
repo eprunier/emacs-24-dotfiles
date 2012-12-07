@@ -91,7 +91,6 @@
 (show-paren-mode 1)
 
 ;; Enable ido
-(setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
 (ido-ubiquitous 1)
@@ -100,3 +99,4 @@
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+
