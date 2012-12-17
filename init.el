@@ -3,7 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" default))))
+ '(custom-safe-themes (quote ("54d1bcf3fcf758af4812f98eb53b5d767f897442753e1aa468cfeb221f8734f9" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -23,18 +23,18 @@
 ;;
 ;; UTF-8 configuration
 ;;
+(set-terminal-coding-system 'utf-8-unix)
+(set-keyboard-coding-system 'utf-8-unix)
+(prefer-coding-system 'utf-8-unix)
 (setq-default buffer-file-coding-system 'utf-8-unix)
-(prefer-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
 
 
 ;;
 ;; Disable mouse features
 ;;
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+  (when (fboundp mode)
+    (funcall mode -1)))
 
 
 ;;
@@ -56,9 +56,9 @@
 			      markdown-mode
 			      haskell-mode ghc ghci-completion))
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+(dolist (package my-packages)
+  (when (not (package-installed-p package))
+    (package-install package)))
 
 
 ;;
