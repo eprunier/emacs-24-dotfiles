@@ -52,7 +52,7 @@
 (defvar my-packages '(paredit ido-ubiquitous smex
 			      rainbow-delimiters highlight-parentheses
 			      clojure-mode clojure-test-mode
-			      ac-slime slime slime-repl nrepl
+			      nrepl ac-nrepl
 			      markdown-mode
 			      haskell-mode ghc ghci-completion))
 

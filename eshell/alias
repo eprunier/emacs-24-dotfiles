@@ -1,4 +1,2 @@
-alias lein1 lein1.bat $*
-alias lein lein2.bat $*
-alias ll ls -l $*
 alias ff find-file $1
+alias ll ls -l $*
