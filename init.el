@@ -53,6 +53,7 @@
 			      rainbow-delimiters highlight-parentheses
 			      clojure-mode clojure-test-mode
 			      nrepl ac-nrepl
+			      magit
 			      markdown-mode
 			      haskell-mode ghc ghci-completion))
 
