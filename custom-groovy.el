@@ -1,5 +1,3 @@
-(provide 'groovy)
-
 ;;; turn on syntax highlighting
 (global-font-lock-mode 1)
 
@@ -13,3 +11,5 @@
           '(lambda ()
              (require 'groovy-electric)
              (groovy-electric-mode)))
+
+(provide 'custom-groovy)

@@ -75,8 +75,9 @@
 (add-to-list 'load-path user-emacs-directory)
 (require 'custom-bindings)
 (require 'custom-functions)
-(require 'clojure)
-(require 'groovy)
+(require 'custom-clojure)
+(require 'custom-nrepl)
+(require 'custom-groovy)
 
 ;; Enable highlight-parentheses-mode on all buffers
 (define-globalized-minor-mode global-highlight-parentheses-mode

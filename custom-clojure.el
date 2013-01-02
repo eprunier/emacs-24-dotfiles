@@ -1,4 +1,4 @@
-;; Useful global settings as Emacs is used predominantely for Clojure development
+;; Modes for ClojureScript development
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
 
 ;; Colour mach parens and other structure characters to make code easy to follow
@@ -10,4 +10,4 @@
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
 
 
-(provide 'clojure)
+(provide 'custom-clojure)
