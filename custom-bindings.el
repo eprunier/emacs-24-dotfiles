@@ -1,5 +1,3 @@
-(provide 'custom-bindings)
-
 ;; Manage buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -27,3 +25,5 @@
 
 ;; Toggle wrap line
 (global-set-key (kbd "S-C-l") 'toggle-truncate-lines)
+
+(provide 'custom-bindings)
