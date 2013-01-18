@@ -78,6 +78,7 @@
 (require 'custom-clojure)
 (require 'custom-nrepl)
 (require 'custom-groovy)
+(require 'custom-jade)
 
 ;; Enable highlight-parentheses-mode on all buffers
 (define-globalized-minor-mode global-highlight-parentheses-mode
