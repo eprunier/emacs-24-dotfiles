@@ -17,8 +17,7 @@
 ;;
 (setq inhibit-startup-message t
       make-backup-files nil)
-(setq-default truncate-lines nil)
-
+(setq-default truncate-lines t)
 
 ;;
 ;; UTF-8 configuration
@@ -54,6 +53,7 @@
 			      clojure-mode clojure-test-mode
 			      nrepl ac-nrepl
 			      magit
+			      linum-off hlinum
 			      markdown-mode
 			      haskell-mode ghc ghci-completion))
 
@@ -103,3 +103,6 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
+;; Show line numbers in margin
+(require 'linum-off)
+(require 'hlinum)
