@@ -106,3 +106,6 @@
 ;; Show line numbers in margin
 (require 'linum-off)
 (require 'hlinum)
+
+;; For non ascii characters
+(require 'iso-transl)
