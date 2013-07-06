@@ -17,7 +17,7 @@
 ;;
 (setq inhibit-startup-message t
       make-backup-files nil)
-(setq-default truncate-lines t)
+(setq-default truncate-lines nil)
 
 ;;
 ;; UTF-8 configuration
@@ -51,7 +51,7 @@
 (defvar my-packages '(paredit ido-ubiquitous smex
 			      rainbow-delimiters highlight-parentheses
 			      clojure-mode clojure-test-mode
-			      nrepl ac-nrepl
+			      nrepl ac-nrepl nrepl-ritz
 			      magit
 			      linum-off hlinum
 			      markdown-mode
