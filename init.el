@@ -17,7 +17,7 @@
 ;;
 (setq inhibit-startup-message t
       make-backup-files nil)
-(setq-default truncate-lines nil)
+(setq-default truncate-lines t)
 
 ;;
 ;; UTF-8 configuration
