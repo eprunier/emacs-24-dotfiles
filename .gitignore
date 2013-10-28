@@ -6,3 +6,4 @@ backups
 url/
 eshell/*
 !eshell/alias
+nrepl-history
