@@ -51,11 +51,10 @@
 (defvar my-packages '(paredit ido-ubiquitous smex
 			      rainbow-delimiters highlight-parentheses
 			      clojure-mode clojure-test-mode
-			      nrepl ac-nrepl nrepl-ritz
+			      cider ac-nrepl
 			      magit
 			      linum-off hlinum
-			      markdown-mode
-			      haskell-mode ghc ghci-completion))
+			      markdown-mode))
 
 (dolist (package my-packages)
   (when (not (package-installed-p package))
@@ -76,7 +75,6 @@
 (require 'custom-bindings)
 (require 'custom-functions)
 (require 'custom-clojure)
-(require 'custom-nrepl)
 (require 'custom-groovy)
 (require 'custom-octave)
 (require 'custom-html)
