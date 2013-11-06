@@ -3,6 +3,7 @@
 
 ;;; Modes for ClojureScript development
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\.edn$" . clojure-mode))
 
 ;;; Colour mach parens and other structure characters to make code easy to follow
 (global-rainbow-delimiters-mode)
