@@ -22,29 +22,11 @@
 ;;; nREPL configuration
 (setq nrepl-hide-special-buffers t)
 
-;;; Some default eldoc facilities
-;;(add-hook 'nrepl-connected-hook
-;;(defun pnh-clojure-mode-eldoc-hook ()
-;;  (add-hook 'clojure-mode-hook 'turn-on-eldoc-mode)
-;;  (add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
-    ;;; Enable nRepl minor-mode for existing clojure buffers when nRepl connection is established
-;;    (nrepl-enable-on-existing-clojure-buffers))
-
 ;;; Auto completion for NREPL
 (require 'ac-nrepl)
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'nrepl-mode))
 (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
 
-;; Refresh nrepl-namespace ([org.clojure/tools.namespace] is required in project.clj)
-(defun nrepl-refresh ()
-  (interactive)
-  (set-buffer "*nrepl*")
-  (goto-char (point-max))
-  (insert "(require 'clojure.tools.namespace.repl)")
-  (nrepl-return)
-  (goto-char (point-max))
-  (insert "(clojure.tools.namespace.repl/refresh)")
-  (nrepl-return))
 
 (provide 'custom-clojure)
