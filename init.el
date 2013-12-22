@@ -50,7 +50,6 @@
 
 (defvar my-packages '(paredit ido-ubiquitous smex
 			      rainbow-delimiters highlight-parentheses
-			      clojure-mode clojure-test-mode
 			      cider ac-nrepl
 			      magit
 			      linum-off hlinum
