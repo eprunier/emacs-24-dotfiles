@@ -13,20 +13,23 @@
 (defun turn-on-paredit () (paredit-mode 1))
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
 
-;;; Cider configuration
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-(add-hook 'cider-repl-mode-hook 'paredit-mode)
-(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'cider-repl-mode-hook 'subword-mode)
+;;; Hooks configuration
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode) ;; Enable eldoc in Clojure buffers
+(add-hook 'cider-repl-mode-hook 'subword-mode) ;; Enable camelCase support
+(add-hook 'cider-repl-mode-hook 'paredit-mode) ;; Enable paredit in the REPL
+(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode) ;; Enable RainbowDelimiters in the REPL
 
-;;; nREPL configuration
-(setq nrepl-hide-special-buffers t)
+;;; Behaviour configuration
+(setq nrepl-hide-special-buffers t) ;; Hide connection and server buffers from 'C-x b' command
+(setq cider-repl-popup-stacktraces t) ;; Enable error buffer popping also in the REPL 
+(setq cider-auto-select-error-buffer t) ;; Auto-select the error buffer when it's displayed
+(setq cider-repl-display-in-current-window t) ;; 'C-c C-z' switch to the Cider REPL
 
 ;;; Auto completion for NREPL
 (require 'ac-nrepl)
+(add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
+(add-hook 'cider-mode-hook 'ac-nrepl-setup)
 (eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'nrepl-mode))
-(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
-
+  '(add-to-list 'ac-modes 'cider-repl-mode))
 
 (provide 'custom-clojure)
