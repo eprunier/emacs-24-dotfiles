@@ -20,10 +20,11 @@
 (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode) ;; Enable RainbowDelimiters in the REPL
 
 ;;; Behaviour configuration
-(setq nrepl-hide-special-buffers t) ;; Hide connection and server buffers from 'C-x b' command
+(setq nrepl-hide-special-buffers nil) ;; Display connection and server buffers from 'C-x b' command
 (setq cider-repl-popup-stacktraces t) ;; Enable error buffer popping also in the REPL 
 (setq cider-auto-select-error-buffer t) ;; Auto-select the error buffer when it's displayed
 (setq cider-repl-display-in-current-window t) ;; 'C-c C-z' switch to the Cider REPL
+(setq cider-repl-pop-to-buffer-on-connect t) ;; Auto-display the REPL buffer in a separate window
 
 ;;; Auto completion for NREPL
 (require 'ac-nrepl)
