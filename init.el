@@ -111,4 +111,6 @@
 (require 'iso-transl)
 
 ;; Initialize exec-path-from-shell
-(exec-path-from-shell-initialize)
+(unless (memq window-system '(w32))
+  (exec-path-from-shell-initialize))
+
