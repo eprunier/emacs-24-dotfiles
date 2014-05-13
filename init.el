@@ -77,6 +77,7 @@
 (require 'custom-groovy)
 (require 'custom-octave)
 (require 'custom-html)
+(require 'custom-go)
 
 ;; Enable highlight-parentheses-mode on all buffers
 (define-globalized-minor-mode global-highlight-parentheses-mode
