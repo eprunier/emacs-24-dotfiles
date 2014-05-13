@@ -53,7 +53,6 @@
 			      cider ac-nrepl
 			      magit
 			      linum-off hlinum
-			      exec-path-from-shell
 			      markdown-mode))
 
 (dolist (package my-packages)
@@ -109,8 +108,3 @@
 
 ;; For non ascii characters
 (require 'iso-transl)
-
-;; Initialize exec-path-from-shell
-(unless (memq window-system '(w32))
-  (exec-path-from-shell-initialize))
-
