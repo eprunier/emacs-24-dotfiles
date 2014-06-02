@@ -11,7 +11,6 @@
  ;; If there is more than one, they won't work right.
  )
 
-
 ;;
 ;; General
 ;;
@@ -27,7 +26,6 @@
 (prefer-coding-system 'utf-8-unix)
 (setq-default buffer-file-coding-system 'utf-8-unix)
 
-
 ;;
 ;; Disable mouse features
 ;;
@@ -35,14 +33,16 @@
   (when (fboundp mode)
     (funcall mode -1)))
 
-
 ;;
 ;; Add default packages to the Emacs environment
 ;; Packages are installed if they are not already present
 ;;
 (require 'package)
 (add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/") )
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.milkbox.net/packages/")
+	     t)
 (package-initialize)
 
 (when (not package-archive-contents)
@@ -59,13 +59,11 @@
   (when (not (package-installed-p package))
     (package-install package)))
 
-
 ;;
 ;; Default theme
 ;;
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'zenburn)
-
 
 ;;
 ;; Customizing
