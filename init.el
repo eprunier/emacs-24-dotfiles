@@ -76,6 +76,7 @@
 (require 'custom-octave)
 (require 'custom-html)
 (require 'custom-go)
+(require 'custom-markdown)
 
 ;; Enable highlight-parentheses-mode on all buffers
 (define-globalized-minor-mode global-highlight-parentheses-mode
