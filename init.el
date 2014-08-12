@@ -41,7 +41,7 @@
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/")
+	     '("melpa" . "http://melpa-stable.milkbox.net/packages/")
 	     t)
 (package-initialize)
 
@@ -50,7 +50,7 @@
 
 (defvar my-packages '(paredit ido-ubiquitous smex
 			      rainbow-delimiters highlight-parentheses
-			      cider ac-nrepl
+			      cider ac-cider company
 			      magit
 			      linum-off hlinum
 			      markdown-mode))

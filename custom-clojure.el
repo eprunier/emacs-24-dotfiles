@@ -27,10 +27,10 @@
 (setq cider-repl-pop-to-buffer-on-connect t) ;; Auto-display the REPL buffer in a separate window
 
 ;;; Auto completion for NREPL
-(require 'ac-nrepl)
-(add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
-(add-hook 'cider-mode-hook 'ac-nrepl-setup)
+(require 'ac-cider)
+(add-hook 'cider-repl-mode-hook 'ac-cider-setup)
+(add-hook 'cider-mode-hook 'ac-cider-setup)
 (eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'cider-repl-mode))
+  '(add-to-list 'ac-modes 'cider-mode))
 
 (provide 'custom-clojure)
